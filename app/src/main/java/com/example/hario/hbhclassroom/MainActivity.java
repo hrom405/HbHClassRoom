@@ -20,7 +20,7 @@ private Button notice;
         facultyLogin = findViewById(R.id.Main_faculty);
 
 // Aditya Ka Chan
-        // Student ONcdrgdrglickjhjkhi
+        // Student ONcdrgdrglickjhjkhiafasf
         studentLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
