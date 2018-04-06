@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HbHClassRoom.iml" filepath="$PROJECT_DIR$/HbHClassRoom.iml" />
-      <module fileurl="file://F:\HbHClassRoom\HbHClassRoom.iml" filepath="F:\HbHClassRoom\HbHClassRoom.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://F:\HbHClassRoom\app\app.iml" filepath="F:\HbHClassRoom\app\app.iml" />
     </modules>
   </component>
 </project>
