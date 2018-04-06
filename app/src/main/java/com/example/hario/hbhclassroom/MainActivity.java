@@ -1,5 +1,6 @@
 package com.example.hario.hbhclassroom;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,11 +20,11 @@ private Button notice;
         notice = findViewById(R.id.Main_notice);
         facultyLogin = findViewById(R.id.Main_faculty);
 
-// Aditya Ka Chan
-        // Student ONcdrgdrglickjhjkhiafasf
         studentLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,SignUpAndInActivity.class));
+                finish();
 
             }
         });
@@ -31,26 +32,22 @@ private Button notice;
 
 
         //Notice Onclick
-notice.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
+    notice.setOnClickListener(new View.OnClickListener() {
+        @Override
+            public void onClick(View v) {
 
-    }
-});
+            }
+    });
 
 //faculty onclick
-facultyLogin.setOnClickListener(new View.OnClickListener() {
+    facultyLogin.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        startActivity(new Intent(MainActivity.this,SignUpAndInActivity.class));
+        finish();
 
-    }
-});
-
-
-
-
-
-
+        }
+    });
 
     }
 }

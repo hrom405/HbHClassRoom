@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "1082750174888-p2h5fjfgq65qu8acvbrcplkd3g0j735h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hario.hbhclassroom",
+            "certificate_hash": "8bfe56ead4545d0689a7c25369a38eb39ef33f1b"
+          }
+        },
+        {
+          "client_id": "1082750174888-a0rf034kb24c5d7igfkp2gj5osqv3121.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hario.hbhclassroom",
+            "certificate_hash": "18d0f90e3cbcd7ae4d9538511e340fac9204673d"
+          }
+        },
+        {
           "client_id": "1082750174888-95e49caootra14il8ng1lf63v9ko0fk8.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +45,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082750174888-95e49caootra14il8ng1lf63v9ko0fk8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

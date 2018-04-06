@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HbHClassRoom</string>
+    <string name="invite_menu_label">Invite</string>
+    <string name="invitation_message">Please Join Me To This Chat</string>
+    <string name="invitation_cta">Call to action</string>
+    <string name="invitation_title">Invite Your Friend To Chat</string>
 </resources>
