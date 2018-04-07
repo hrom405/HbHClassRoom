@@ -122,7 +122,7 @@ public class ChatBoxActivity extends AppCompatActivity implements
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mUsername = ANONYMOUS;
         final Calendar cd = Calendar.getInstance();
-        final SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy h:mm a");
+        final SimpleDateFormat df = new SimpleDateFormat("dd-MM-yy h:mm a");
 
         // Initialize Firebase Auth
         mFirebaseAuth = FirebaseAuth.getInstance();

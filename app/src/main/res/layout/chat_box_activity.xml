@@ -5,7 +5,8 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="@color/black">
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -36,22 +37,22 @@
         <ImageView
             android:id="@+id/addMessageImageView"
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@mipmap/ic_add_a_photo_white_24dp"
-            android:background="@color/green"/>
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_add_a_photo_white_24dp"/>
 
         <EditText
             android:id="@+id/messageEditText"
             android:layout_width="0dp"
             android:hint="Enter Your Message"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:paddingLeft="5dp"
+            android:background="@color/white"
             android:layout_gravity="bottom"
             android:layout_weight="1" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="SEND"
             android:enabled="false"
             android:id="@+id/sendButton"
