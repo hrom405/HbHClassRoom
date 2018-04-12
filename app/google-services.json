@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1082750174888-79p4n7581846ovpgh1fl4o7fjf1rlagj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hario.hbhclassroom",
+            "certificate_hash": "748d87d6ec8066355fe30998dd207aca9b68ef9e"
+          }
+        },
+        {
           "client_id": "1082750174888-p2h5fjfgq65qu8acvbrcplkd3g0j735h.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
