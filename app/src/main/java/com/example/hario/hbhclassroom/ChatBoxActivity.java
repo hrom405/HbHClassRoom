@@ -425,9 +425,9 @@ public class ChatBoxActivity extends AppCompatActivity implements
     }
 
     private void sendInvitation() {
-        Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
-                .setMessage(getString(R.string.invitation_message))
-                .setCallToActionText(getString(R.string.invitation_cta))
+        Intent intent = new AppInviteInvitation.IntentBuilder("nvitation_title")
+                .setMessage("invitation_message")
+                .setCallToActionText("invitation_cta")
                 .build();
         startActivityForResult(intent, REQUEST_INVITE);
     }

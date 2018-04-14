@@ -6,15 +6,19 @@
     android:layout_height="match_parent"
     tools:context="com.example.hario.hbhclassroom.MainActivity"
     android:layout_margin="10dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:id="@+id/re1">
 
   <Button
-      android:id="@+id/Main_student"
-      android:layout_width="200dp"
-      android:layout_height="wrap_content"
-      android:text="Student Login"
-      android:layout_centerHorizontal="true"
-      android:layout_marginTop="200dp"
-      />
+    android:id="@+id/Main_student"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="49dp"
+    android:text="Student Login" />
   <Button
       android:id="@+id/Main_faculty"
       android:layout_width="200dp"
@@ -32,6 +36,18 @@
       android:text="Notice"
       android:layout_below="@+id/Main_faculty"
       android:layout_centerHorizontal="true"
-        />
+      /></RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+
+      android:layout_below="@+id/re1">
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+  </RelativeLayout>
 
 </RelativeLayout>

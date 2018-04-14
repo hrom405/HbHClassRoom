@@ -2,11 +2,57 @@ package com.example.hario.hbhclassroom.Drawer;
 
 public class RecyclerInfo {
     private String name;
-    private int count;
+    private int percentage;
+private int thumbnail;
 
-    public RecyclerInfo(String name, int count) {
+private String subject;
+private String time;
+private String teacherName;
+private String room;
+    public RecyclerInfo(String name, int Percentage, int thumb) {
         this.name = name;
-        this.count = count;
+        this.percentage = Percentage;
+        this.thumbnail = thumb;
+    }
+
+    public RecyclerInfo(String Subject, String Time, String TeacherName, String Room) {
+        this.time = Time;
+        this.teacherName = TeacherName;
+        this.subject = Subject;
+      this.room = Room;
+    }
+
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getTeacherName() {
+        return teacherName;
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
     }
 
     public String getName() {
@@ -17,11 +63,19 @@ public class RecyclerInfo {
         this.name = name;
     }
 
-    public int getCount() {
-        return count;
+    public int getPercentage() {
+        return percentage;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setPercentage(int percentage) {
+        this.percentage = percentage;
+    }
+
+    public int getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(int thumbnail) {
+        this.thumbnail = thumbnail;
     }
 }
