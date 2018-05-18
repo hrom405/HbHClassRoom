@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/student_add_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/student_add_image"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp">
+    <LinearLayout
+        android:id="@+id/L2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/Student_RollNo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:hint="Student's RollNo"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/Student_Gender"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="M/F/T"
+            android:inputType="textCapCharacters"/>
+        <EditText
+            android:id="@+id/Student_enter_age"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Age"
+            android:inputType="number"/>
+    </LinearLayout>
+        <EditText
+            android:id="@+id/student_Enter_Name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Student's Full Name"
+            android:inputType="textCapCharacters"/>
+        <LinearLayout
+            android:id="@+id/Student_ClassDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/student_Enter_Name">
+        <EditText
+            android:id="@+id/student_Enter_Class"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:hint="Class"
+            android:inputType="textCapCharacters"/>
+            <EditText
+                android:id="@+id/student_Enter_Section"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:hint="Section"
+                android:inputType="number"/>
+            <EditText
+                android:id="@+id/student_Enter_Semester"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:hint="Semester"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/student_Enter_ContactNo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/Student_ClassDetails"
+            android:hint="Contact Number"
+            android:inputType="number"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/student_add_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add DETAILS"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

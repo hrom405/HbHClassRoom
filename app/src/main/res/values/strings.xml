@@ -11,4 +11,14 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="Staff_Occupation_List">
+        <item>Electritian</item>
+        <item>Plumber</item>
+        <item>Security</item>
+        <item>Technician</item>
+        <item>Sweeper</item>
+        <item>Administration</item>
+    </string-array>
+
 </resources>

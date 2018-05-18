@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/Staff_add_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Staff_add_image"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp">
+        <LinearLayout
+            android:id="@+id/L2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/Staff_ID"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:hint="Staff's ID"
+                android:inputType="number"/>
+            <EditText
+                android:id="@+id/Staff_Gender"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="M/F/T"
+                android:inputType="textCapCharacters"/>
+            <EditText
+                android:id="@+id/Staff_enter_age"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Age"
+                android:inputType="number"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/Staff_Enter_Name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Staff's Full Name"
+            android:inputType="textCapCharacters"/>
+        <LinearLayout
+            android:id="@+id/Staff_Details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/Staff_Enter_Name">
+            <EditText
+                android:id="@+id/Staff_Enter_AadharID"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1.5"
+                android:layout_marginTop="5dp"
+                android:hint="Aadhaar Card ID"
+                android:inputType="number"/>
+
+            <Spinner
+                android:id="@+id/Staff_Occupation_SpinnerID"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:entries="@array/Staff_Occupation_List">
+
+            </Spinner>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/Staff_Enter_ContactNo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/Staff_Details"
+            android:hint="Contact Number"
+            android:inputType="number"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/Staff_add_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add DETAILS"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

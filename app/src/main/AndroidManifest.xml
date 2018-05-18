@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hario.hbhclassroom">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -32,6 +36,15 @@
         <activity
             android:name=".ChatBoxActivity"
             android:label="Class Group ChatBox" />
+        <activity
+            android:name=".Staff.AddTeacherDetails"
+            android:label="Add Teacher Details" />
+        <activity
+            android:name=".Staff.AddStudentDetails"
+            android:label="Add Student Details" />
+        <activity
+            android:name=".Staff.AddStaffDetails"
+            android:label="Add Staff Details" />
         <activity android:name=".SignUpAndInActivity" />
 
         <service
