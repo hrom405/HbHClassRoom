@@ -46,6 +46,16 @@ public class NaviDrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+        ft.add(R.id.content_main, new RecyclerActivity());
+        ft.addToBackStack("tag_back");
+        toolbar.setTitle("Import");
+
+        ft.commit();
+
     }
 
     @Override
