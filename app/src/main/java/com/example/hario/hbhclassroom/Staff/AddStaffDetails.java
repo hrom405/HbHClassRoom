@@ -138,7 +138,7 @@ public class AddStaffDetails extends AppCompatActivity {
             progressDialog.setMessage("Uploading...");
             progressDialog.show();
 
-
+            //
             // Creating second StorageReference.
             StorageReference storageReference2nd = storageReference.child("StaffImage").child(ImageUrl.getLastPathSegment());
 
