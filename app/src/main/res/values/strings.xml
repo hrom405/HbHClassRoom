@@ -12,13 +12,15 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!-- TODO: Spinner Item in Staff Occupation -->
     <string-array name="Staff_Occupation_List">
-        <item>Electritian</item>
-        <item>Plumber</item>
-        <item>Security</item>
-        <item>Technician</item>
-        <item>Sweeper</item>
-        <item>Administration</item>
+        <item>Electritian </item>
+        <item>Plumber </item>
+        <item>Security </item>
+        <item>Technician </item>
+        <item>Sweeper </item>
+        <item>Administration </item>
     </string-array>
+    <!-- TODO: Spinner Item in Staff Occupation -->
 
 </resources>
