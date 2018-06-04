@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.example.hario.hbhclassroom.Staff.AddStaffDetails;
 import com.example.hario.hbhclassroom.Staff.AddStudentDetails;
 import com.example.hario.hbhclassroom.Staff.AddTeacherDetails;
+import com.example.hario.hbhclassroom.Staff.MenuStaff;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -138,7 +139,7 @@ public class SignUpAndInActivity extends AppCompatActivity implements GoogleApiC
                             Toast.makeText(SignUpAndInActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            startActivity(new Intent(SignUpAndInActivity.this, AddTeacherDetails.class));
+                            startActivity(new Intent(SignUpAndInActivity.this, MenuStaff.class));
                             finish();
                         }
                     }

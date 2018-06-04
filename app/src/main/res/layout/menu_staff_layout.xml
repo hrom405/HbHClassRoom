@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/teacher_section_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_launcher"
+        />
+    <TextView
+        android:id="@+id/teacher_section_image_TV"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/teacher_section_image"
+        android:text="Teacher Section"
+        android:gravity="center_horizontal"/>
+
+    <ImageView
+        android:id="@+id/student_section_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/student_section_image_TV"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/teacher_section_image"
+        android:text="Student Section"
+        android:gravity="center_horizontal"/>
+
+    <ImageView
+        android:id="@+id/staff_section_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/teacher_section_image"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/staff_section_image_TV"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/staff_section_image"
+        android:text="Staff Section"
+        android:gravity="center_horizontal"/>
+    <ImageView
+        android:id="@+id/notice_section_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/student_section_image"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/notice_section_image_TV"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/notice_section_image"
+        android:text="Notice Section"
+        android:gravity="center_horizontal"/>
+    <ImageView
+        android:id="@+id/extra_section_image"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/staff_section_image"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/extra_section_image_TV"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/extra_section_image"
+        android:text="Extra Section"
+        android:gravity="center_horizontal"/>
+
+</RelativeLayout>

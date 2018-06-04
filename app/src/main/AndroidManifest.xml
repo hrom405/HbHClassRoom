@@ -33,18 +33,51 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ChatBoxActivity"
             android:label="Class Group ChatBox" />
         <activity
+            android:name=".Staff.MenuStaff"
+            android:label="Admin Menu" />
+        <activity
             android:name=".Staff.AddTeacherDetails"
             android:label="Add Teacher Details" />
+        <activity
+            android:name=".Staff.MenuTeacherSection"
+            android:label="Teacher Portal" />
+        <activity
+            android:name=".Staff.ViewTeacherAllList"
+            android:label="All Teacher's List" />
+        <activity
+            android:name=".Staff.ViewTeacherDetails"
+            android:label="Teacher's Details" />
+        <activity
+            android:name=".Staff.AddTeacherTimeTable"
+            android:label="Add Teacher's TimeTable" />
+        <activity
+            android:name=".Staff.AddStudentTimeTable"
+            android:label="Add Teacher's TimeTable" />
         <activity
             android:name=".Staff.AddStudentDetails"
             android:label="Add Student Details" />
         <activity
+            android:name=".Staff.MenuStudentSection"
+            android:label="Student Portal" />
+        <activity
             android:name=".Staff.AddStaffDetails"
             android:label="Add Staff Details" />
+        <activity
+            android:name=".Staff.MenuStaffSection"
+            android:label="Staff Portal" />
+        <activity
+            android:name=".Staff.MenuNoticeSection"
+            android:label="Notice Portal" />
+        <activity
+            android:name=".Staff.MenuExtraSection"
+            android:label="Extra Portal" />
+
+
         <activity android:name=".SignUpAndInActivity" />
 
         <service

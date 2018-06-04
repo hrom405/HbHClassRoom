@@ -114,7 +114,7 @@ public class AddTeacherDetails extends AppCompatActivity {
         final String contact = contactNumber.getText().toString();
 
 
-        String tcid = id.getText().toString();
+        final String tcid = id.getText().toString();
         final int tchid = Integer.parseInt(tcid);
             String tcage = age.getText().toString();
         final int tchage = Integer.parseInt(tcage);
@@ -142,17 +142,12 @@ public class AddTeacherDetails extends AppCompatActivity {
                             TeacherINFO teacherINFO = new TeacherINFO(tcname, tcdesignation,tcgender,
                                     taskSnapshot.getDownloadUrl().toString(),contact,tchid,tchage,dateofjoining);
 
-                            // Getting image upload ID.
-                            String TeacherUploadKeyID = databaseReference.push().getKey();
-
-                            // Adding image upload id s child element into databaseReference.
                             String uuid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                            databaseReference.child("teacher").child("teacherdetails").child(TeacherUploadKeyID).setValue(teacherINFO);
-                            // Toast.makeText(getApplicationContext(), "Items Will Be Uploaded Shortly", Toast.LENGTH_LONG).show();
+                            databaseReference.child("teacher").child("teacherdetails").child(tcid).setValue(teacherINFO);
                             progressDialog.hide();
                             Toast.makeText(getApplicationContext(), "Teacher's Details Added Successfully", Toast.LENGTH_LONG).show();
 
-                            startActivity(new Intent(AddTeacherDetails.this, MainActivity.class));
+                            startActivity(new Intent(AddTeacherDetails.this, MenuTeacherSection.class));
                             finish();
                         }
                     })

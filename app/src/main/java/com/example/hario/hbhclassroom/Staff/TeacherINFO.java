@@ -67,6 +67,15 @@ public class TeacherINFO {
     public void setTCdoj(String  TCdoj) {
         this.TCdoj = TCdoj;
     }
+    public TeacherINFO(){}
+
+    public TeacherINFO(String TCname, String TCdesignation, String TCimage,int TCid) {
+        this.TCname = TCname;
+        this.TCdesignation = TCdesignation;
+        this.TCimage = TCimage;
+        this.TCid = TCid;
+
+    }
 
     public TeacherINFO(String TCname, String TCdesignation, String TCgender, String TCimage, String  TCcontact, int TCid, int TCage, String TCdoj) {
         this.TCname = TCname;

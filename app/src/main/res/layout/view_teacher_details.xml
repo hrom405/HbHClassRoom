@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+    <ImageView
+        android:id="@+id/view_Teacher_Image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+    <LinearLayout
+        android:id="@+id/LL1_below_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/view_Teacher_Image">
+
+        <TextView
+            android:id="@+id/view_Teacher_ID_TV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Teacher's ID"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/view_Teacher_Gender_TV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="M / F / T"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/view_Teacher_Age_TV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="123"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LL2_vertical_below_ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/view_Teacher_Image"
+        android:layout_above="@id/view_teacher_timetable_Button">
+        <LinearLayout
+            android:id="@+id/LL2_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Teacher's Name"
+                android:gravity="center_vertical"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/view_Teacher_Name_TV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Pappu"
+                android:gravity="center_vertical"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LL2_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Teacher's Designation"
+                android:gravity="center_vertical"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/view_Teacher_Designation_TV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Assisstant Professor"
+                android:gravity="center_vertical"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LL2_3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Teacher's Date Of Join"
+                android:gravity="center_vertical"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/view_Teacher_DOJ_TV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="123456789"
+                android:gravity="center_vertical"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LL2_4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Teacher's Contact No."
+                android:gravity="center_vertical"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/view_Teacher_Contact_No_TV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="01/01/1996"
+                android:gravity="center_vertical"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/view_teacher_timetable_Button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="View TimeTable"/>
+
+
+</RelativeLayout>

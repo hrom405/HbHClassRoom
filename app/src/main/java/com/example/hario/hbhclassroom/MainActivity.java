@@ -13,7 +13,7 @@ import com.example.hario.hbhclassroom.Staff.AddTeacherDetails;
 public class MainActivity extends AppCompatActivity {
 private Button studentLogin;
 private Button facultyLogin;
-private Button notice;
+private Button notice,adminLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,39 @@ private Button notice;
         studentLogin = findViewById(R.id.Main_student);
         notice = findViewById(R.id.Main_notice);
         facultyLogin = findViewById(R.id.Main_faculty);
+        adminLogin=findViewById(R.id.Admin_faculty);
 
+        //Student OnClick Login
         studentLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,SignUpAndInActivity.class));
+                finish();
+            }
+        });
+
+
+
+        //Notice Onclick
+        notice.setOnClickListener(new View.OnClickListener() {
+        @Override
+            public void onClick(View v) {
+            startActivity(new Intent(MainActivity.this,SignUpAndInActivity.class));
+            finish();
+            }
+        });
+
+        //faculty onclick
+        facultyLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            startActivity(new Intent(MainActivity.this,SignUpAndInActivity.class));
+            finish();
+            }
+        });
+
+        // Admin OnClick Login
+        adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,SignUpAndInActivity.class));
@@ -32,26 +63,6 @@ private Button notice;
 
             }
         });
-
-
-
-        //Notice Onclick
-    notice.setOnClickListener(new View.OnClickListener() {
-        @Override
-            public void onClick(View v) {
-            startActivity(new Intent(MainActivity.this,SignUpAndInActivity.class));
-            }
-    });
-
-//faculty onclick
-    facultyLogin.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        startActivity(new Intent(MainActivity.this,SignUpAndInActivity.class));
-        finish();
-
-        }
-    });
 
     }
 }
