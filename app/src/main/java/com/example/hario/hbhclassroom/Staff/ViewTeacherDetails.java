@@ -1,12 +1,15 @@
 package com.example.hario.hbhclassroom.Staff;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -23,6 +26,8 @@ import static android.content.ContentValues.TAG;
 
 public class ViewTeacherDetails extends AppCompatActivity {
     private TeacherINFO teacherINFO;
+    private LinearLayout linearLayout;
+    String TCID="";
     private ImageView tcImage;
     private TextView tcID,tcDesignation,tcName,tcContact,tcDOJ,tcGender,tcAge;
    // static ArrayList<TeacherINFO> arrayList = new ArrayList<>();
@@ -34,6 +39,9 @@ public class ViewTeacherDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_teacher_details);
 
+        linearLayout=findViewById(R.id.LL2_3_1);
+        linearLayout.setVisibility(View.GONE);
+
         tcID = findViewById(R.id.view_Teacher_ID_TV);
         tcName = findViewById(R.id.view_Teacher_Name_TV);
         tcDesignation = findViewById(R.id.view_Teacher_Designation_TV);
@@ -44,10 +52,22 @@ public class ViewTeacherDetails extends AppCompatActivity {
         tcImage = findViewById(R.id.view_Teacher_Image);
         tcTimeTableButton = findViewById(R.id.view_teacher_timetable_Button);
 
+
+
         savedInstanceState = getIntent().getExtras();
-        String TCID = savedInstanceState.getString("TCID");
+        TCID = savedInstanceState.getString("TCID");
 
         tcID.setText(TCID);
+
+        tcTimeTableButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // String teacherID = String.valueOf(arrayList.get(position).getTCid());
+                Intent intent = new Intent(ViewTeacherDetails.this,ViewTeacherTimeTable.class);
+                intent.putExtra("TCID", TCID);
+                startActivity(intent);
+            }
+        });
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("teacher");
 

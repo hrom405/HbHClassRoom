@@ -40,6 +40,9 @@
         <activity
             android:name=".Staff.MenuStaff"
             android:label="Admin Menu" />
+
+
+
         <activity
             android:name=".Staff.AddTeacherDetails"
             android:label="Add Teacher Details" />
@@ -53,17 +56,35 @@
             android:name=".Staff.ViewTeacherDetails"
             android:label="Teacher's Details" />
         <activity
+            android:name=".Staff.ViewTeacherTimeTable"
+            android:label="Teacher's TimeTable" />
+        <activity
             android:name=".Staff.AddTeacherTimeTable"
             android:label="Add Teacher's TimeTable" />
+
+
+
         <activity
             android:name=".Staff.AddStudentTimeTable"
-            android:label="Add Teacher's TimeTable" />
+            android:label="Add Student's TimeTable" />
+        <activity
+            android:name=".Staff.ViewStudentTimeTable"
+            android:label="Student's TimeTable" />
         <activity
             android:name=".Staff.AddStudentDetails"
             android:label="Add Student Details" />
         <activity
+            android:name=".Staff.ViewStudentAllList"
+            android:label="All Student's List" />
+        <activity
+            android:name=".Staff.ViewStudentDetails"
+            android:label="Student's Details" />
+        <activity
             android:name=".Staff.MenuStudentSection"
             android:label="Student Portal" />
+
+
+
         <activity
             android:name=".Staff.AddStaffDetails"
             android:label="Add Staff Details" />

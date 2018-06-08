@@ -106,9 +106,8 @@ public class AddStudentDetails extends AppCompatActivity {
         final String stgender = gender.getText().toString();
         final String stclass = classs.getText().toString();
         final String contact = contactNumber.getText().toString();
+        final String stroll = rollno.getText().toString();
 
-        String stroll = rollno.getText().toString();
-        final int strollno = Integer.parseInt(stroll);
         String stsec = section.getText().toString();
         final int stsection = Integer.parseInt(stsec);
 
@@ -126,32 +125,23 @@ public class AddStudentDetails extends AppCompatActivity {
                   progressDialog.setMessage("Uploading...");
                   progressDialog.show();
 
-
-            // Creating second StorageReference.
             StorageReference storageReference2nd = storageReference.child("StudentImage").child(ImageUrl.getLastPathSegment());
-
-            // Adding addOnSuccessListener to second StorageReference.
             storageReference2nd.putFile(ImageUrl)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-                            //progressDialog.dismiss();
                             @SuppressWarnings("VisibleForTests")
                             StudentINFO studentINFO = new StudentINFO(stname, stclass,stgender,
-                                    taskSnapshot.getDownloadUrl().toString(),strollno,stsection,stsemester,contact,stdage);
+                                    taskSnapshot.getDownloadUrl().toString(),stroll,stsection,stsemester,contact,stdage);
 
-                            // Getting image upload ID.
-                            String StudentUploadKeyID = databaseReference.push().getKey();
-
-                            // Adding image upload id s child element into databaseReference.
                             String uuid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                            databaseReference.child("student").child("studentdetails").child(StudentUploadKeyID).setValue(studentINFO);
+                            databaseReference.child("student").child("studentdetails").child(stroll).setValue(studentINFO);
                             // Toast.makeText(getApplicationContext(), "Items Will Be Uploaded Shortly", Toast.LENGTH_LONG).show();
                            progressDialog.hide();
                             Toast.makeText(getApplicationContext(), "Student's Details Added Successfully", Toast.LENGTH_LONG).show();
 
-                            startActivity(new Intent(AddStudentDetails.this, MainActivity.class));
+                            startActivity(new Intent(AddStudentDetails.this, MenuStudentSection.class));
                             finish();
                         }
                     })
@@ -160,10 +150,6 @@ public class AddStudentDetails extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception exception) {
 
-                            // Hiding the progressDialog.
-                            //  progressDialog.dismiss();
-
-                            // Showing exception erro message.
                             Toast.makeText(AddStudentDetails.this,"Something is going wrong", Toast.LENGTH_LONG).show();
                         }
                     })
@@ -172,9 +158,6 @@ public class AddStudentDetails extends AppCompatActivity {
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-
-                            // Setting progressDialog Title.
-                            //  progressDialog.setTitle("Image is Uploading...");
 
                         }
                     });

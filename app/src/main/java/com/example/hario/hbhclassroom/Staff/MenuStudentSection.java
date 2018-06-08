@@ -46,7 +46,13 @@ public class MenuStudentSection extends AppCompatActivity {
 
             }
         });
-
+        listAllStudentTV.setText("List All Students");
+        listAllStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuStudentSection.this,ViewStudentAllList.class));
+            }
+        });
 
 
     }

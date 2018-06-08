@@ -3,8 +3,8 @@ package com.example.hario.hbhclassroom.Staff;
 import android.widget.Spinner;
 
 public class StudentINFO {
-    private String STname,STclasss,STgender,STimage,STcontact;
-    private int STrollno,STsection,STsemester,STage;
+    private String STname,STclasss,STgender,STimage,STcontact,STrollno;
+    private int STsection,STsemester,STage;
 
     public String getSTname() {
         return STname;
@@ -22,7 +22,7 @@ public class StudentINFO {
         return STimage;
     }
 
-    public int getSTrollno() {
+    public String getSTrollno() {
         return STrollno;
     }
 
@@ -58,7 +58,7 @@ public class StudentINFO {
         this.STimage = STimage;
     }
 
-    public void setSTrollno(int STrollno) {
+    public void setSTrollno(String  STrollno) {
         this.STrollno = STrollno;
     }
 
@@ -77,8 +77,9 @@ public class StudentINFO {
     public void setSTage(int STage) {
         this.STage = STage;
     }
+    public StudentINFO(){}
 
-    public StudentINFO(String STname, String STclasss, String STgender, String STimage, int STrollno, int STsection, int STsemester, String STcontact, int STage) {
+    public StudentINFO(String STname, String STclasss, String STgender, String STimage, String STrollno, int STsection, int STsemester, String STcontact, int STage) {
         this.STname = STname;
         this.STclasss = STclasss;
         this.STgender = STgender;

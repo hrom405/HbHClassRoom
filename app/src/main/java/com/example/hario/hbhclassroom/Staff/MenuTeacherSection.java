@@ -45,7 +45,7 @@ public class MenuTeacherSection extends AppCompatActivity{
                 startActivity(new Intent(MenuTeacherSection.this,ViewTeacherAllList.class));
             }
         });
-        updateTeacherTV.setText("Teacher TimeTable Details");
+        updateTeacherTV.setText("Edit TimeTable");
         updateTeacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
