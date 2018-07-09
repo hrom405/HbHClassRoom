@@ -25,7 +25,7 @@ import static android.content.ContentValues.TAG;
 public class ViewTeacherTimeTable extends AppCompatActivity {
 
 
-    private TextView teacherID, sub1,sub2,sub3,sub4,sub5,sub6,sub7,sub8,cls1,cls2,cls3,cls4,cls5,cls6,cls7,cls8,cls;
+    private TextView teacherID, sub1,sub2,sub3,sub4,sub5,sub6,sub7,sub8,cls1,cls2,cls3,cls4,cls5,cls6,cls7,cls8,cls,r1,r2,r3,r4,r5,r6,r7,r8;
     private Spinner selectDay;
     private DatabaseReference databaseReference;
     private TeacherTimeTableINFO teacherTimeTableINFO;
@@ -88,6 +88,16 @@ public class ViewTeacherTimeTable extends AppCompatActivity {
         cls7=findViewById(R.id.view_teacher_tt_ClassID7);
         cls8=findViewById(R.id.view_teacher_tt_ClassID8);
 
+        r1=findViewById(R.id.view_teacher_tt_RoomNO1);
+        r2=findViewById(R.id.view_teacher_tt_RoomNO2);
+        r3=findViewById(R.id.view_teacher_tt_RoomNO3);
+        r4=findViewById(R.id.view_teacher_tt_RoomNO4);
+        r5=findViewById(R.id.view_teacher_tt_RoomNO5);
+        r6=findViewById(R.id.view_teacher_tt_RoomNO6);
+        r7=findViewById(R.id.view_teacher_tt_RoomNO7);
+        r8=findViewById(R.id.view_teacher_tt_RoomNO8);
+
+
     }
     private void updateUI(final String choice) {
 
@@ -110,6 +120,33 @@ public class ViewTeacherTimeTable extends AppCompatActivity {
                 sub6.setText(teacherTimeTableINFO.getSubject6());
                 sub7.setText(teacherTimeTableINFO.getSubject7());
                 sub8.setText(teacherTimeTableINFO.getSubject8());
+            }
+
+
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                //    Toast.makeText(HostActivityMain.this, "LogOut Successful", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        databaseReference.child(TCID).child(choice+"3").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.e(TAG, "updateUI: " + TCID + " "+choice);
+                TeacherTimeTableINFO teacherTimeTableRoomNo = dataSnapshot.getValue(TeacherTimeTableINFO.class);
+                Log.e(TAG, "Title/DAta: " + teacherTimeTableRoomNo.getRoom1());
+
+                //teacherID.setText(teacherTimeTableINFO.getTeacherID());
+
+                r1.setText(teacherTimeTableRoomNo.getRoom1());
+                r2.setText(teacherTimeTableRoomNo.getRoom2());
+                r3.setText(teacherTimeTableRoomNo.getRoom3());
+                r4.setText(teacherTimeTableRoomNo.getRoom4());
+                r5.setText(teacherTimeTableRoomNo.getRoom5());
+                r6.setText(teacherTimeTableRoomNo.getRoom6());
+                r7.setText(teacherTimeTableRoomNo.getRoom7());
+                r8.setText(teacherTimeTableRoomNo.getRoom8());
             }
 
 

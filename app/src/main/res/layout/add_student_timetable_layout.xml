@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
     <LinearLayout
         android:id="@+id/LL1"
         android:layout_width="match_parent"
@@ -53,8 +53,8 @@
                 android:id="@+id/nine_to_ten"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="09:00-10:00"
+                android:layout_weight="0.5"
+                android:text="09:00"
                 android:gravity="center_vertical"
                 android:textSize="16dp"/>
             <EditText
@@ -65,10 +65,17 @@
                 android:hint="Enter Subject 1"
                 android:inputType="text"/>
             <EditText
+                android:id="@+id/add_RoomNo1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="Room"/>
+            <EditText
                 android:id="@+id/add_tchrID1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:inputType="number"
                 android:hint="Tchr ID"/>
         </LinearLayout>
@@ -81,8 +88,8 @@
                 android:id="@+id/ten_to_eleven"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="10:00-11:00"
+                android:layout_weight="0.5"
+                android:text="10:00"
                 android:gravity="center_vertical"
                 android:textSize="16dp"/>
             <EditText
@@ -93,10 +100,17 @@
                 android:hint="Enter Subject 2"
                 android:inputType="text"/>
             <EditText
+                android:id="@+id/add_RoomNo2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="Room"/>
+            <EditText
                 android:id="@+id/add_tchrID2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:inputType="number"
                 android:hint="Tchr ID"/>
         </LinearLayout>
@@ -109,8 +123,8 @@
                 android:id="@+id/eleven"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="11:00-12:00"
+                android:layout_weight="0.5"
+                android:text="11:00"
                 android:gravity="center_vertical"
                 android:textSize="16dp"/>
             <EditText
@@ -121,10 +135,17 @@
                 android:hint="Enter Subject 3"
                 android:inputType="text"/>
             <EditText
+                android:id="@+id/add_RoomNo3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="Room"/>
+            <EditText
                 android:id="@+id/add_tchrID3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:inputType="number"
                 android:hint="Tchr ID"/>
         </LinearLayout>
@@ -137,8 +158,8 @@
                 android:id="@+id/twelve"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="12:00-01:00"
+                android:layout_weight="0.5"
+                android:text="12:00"
                 android:gravity="center_vertical"
                 android:textSize="16dp"/>
             <EditText
@@ -148,12 +169,19 @@
                 android:layout_weight="2"
                 android:hint="Enter Subject 4"
                 android:inputType="text"/>
+            <EditText
+                android:id="@+id/add_RoomNo4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="Room"/>
 
             <EditText
                 android:id="@+id/add_tchrID4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:hint="Tchr ID"
                 android:inputType="number" />
         </LinearLayout>
@@ -166,8 +194,8 @@
                 android:id="@+id/one"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="01:00-02:00"
+                android:layout_weight="0.5"
+                android:text="01:00"
                 android:gravity="center_vertical"
                 android:textSize="16dp"/>
             <EditText
@@ -178,10 +206,17 @@
                 android:hint="Enter Subject 5"
                 android:inputType="text"/>
             <EditText
+                android:id="@+id/add_RoomNo5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="Room"/>
+            <EditText
                 android:id="@+id/add_tchrID5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:inputType="number"
                 android:hint="Tchr ID"/>
         </LinearLayout>
@@ -194,8 +229,8 @@
                 android:id="@+id/two"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="02:00-03:00"
+                android:layout_weight="0.5"
+                android:text="02:00"
                 android:gravity="center_vertical"
                 android:textSize="16dp"/>
             <EditText
@@ -206,10 +241,17 @@
                 android:hint="Enter Subject 6"
                 android:inputType="text"/>
             <EditText
+                android:id="@+id/add_RoomNo6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="Room"/>
+            <EditText
                 android:id="@+id/add_tchrID6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:inputType="number"
                 android:hint="Tchr ID"/>
         </LinearLayout>
@@ -222,8 +264,8 @@
                 android:id="@+id/three"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="03:00-04:00"
+                android:layout_weight="0.5"
+                android:text="03:00"
                 android:gravity="center_vertical"
                 android:textSize="16dp"/>
             <EditText
@@ -234,10 +276,17 @@
                 android:hint="Enter Subject 7"
                 android:inputType="text"/>
             <EditText
+                android:id="@+id/add_RoomNo7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="Room"/>
+            <EditText
                 android:id="@+id/add_tchrID7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:inputType="number"
                 android:hint="Tchr ID"/>
         </LinearLayout>
@@ -250,8 +299,8 @@
                 android:id="@+id/four"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="04:00-05:00"
+                android:layout_weight="0.5"
+                android:text="04:00"
                 android:gravity="center_vertical"
                 android:textSize="16dp"/>
             <EditText
@@ -262,10 +311,17 @@
                 android:hint="Enter Subject 8"
                 android:inputType="text"/>
             <EditText
+                android:id="@+id/add_RoomNo8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="Room"/>
+            <EditText
                 android:id="@+id/add_tchrID8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:inputType="number"
                 android:hint="Tchr ID"/>
         </LinearLayout>

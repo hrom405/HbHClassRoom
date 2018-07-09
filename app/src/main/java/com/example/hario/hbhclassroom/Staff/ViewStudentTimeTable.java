@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hario.hbhclassroom.R;
 import com.google.firebase.database.DataSnapshot;
@@ -22,7 +23,7 @@ import static android.content.ContentValues.TAG;
 
 public class ViewStudentTimeTable extends AppCompatActivity {
 
-    private TextView tID, sub1,sub2,sub3,sub4,sub5,sub6,sub7,sub8,cls1,cls2,cls3,cls4,cls5,cls6,cls7,cls8,cls;
+    private TextView tID, sub1,sub2,sub3,sub4,sub5,sub6,sub7,sub8,cls1,cls2,cls3,cls4,cls5,cls6,cls7,cls8,cls,r1,r2,r3,r4,r5,r6,r7,r8;
     private Spinner selectDay;
     private DatabaseReference databaseReference;
     private TeacherTimeTableINFO teacherTimeTableINFO;
@@ -82,6 +83,16 @@ public class ViewStudentTimeTable extends AppCompatActivity {
         cls7=findViewById(R.id.view_teacher_tt_ClassID7);
         cls8=findViewById(R.id.view_teacher_tt_ClassID8);
 
+        r1=findViewById(R.id.view_teacher_tt_RoomNO1);
+        r2=findViewById(R.id.view_teacher_tt_RoomNO2);
+        r3=findViewById(R.id.view_teacher_tt_RoomNO3);
+        r4=findViewById(R.id.view_teacher_tt_RoomNO4);
+        r5=findViewById(R.id.view_teacher_tt_RoomNO5);
+        r6=findViewById(R.id.view_teacher_tt_RoomNO6);
+        r7=findViewById(R.id.view_teacher_tt_RoomNO7);
+        r8=findViewById(R.id.view_teacher_tt_RoomNO8);
+
+
     }
     private void updateUI(final String choice) {
 
@@ -109,8 +120,33 @@ public class ViewStudentTimeTable extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                //    Toast.makeText(HostActivityMain.this, "LogOut Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ViewStudentTimeTable.this, "Data Not Found", Toast.LENGTH_SHORT).show();
 
+            }
+        });
+        databaseReference.child(TCID).child("timetable").child(choice+"3").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.e(TAG, "updateUI: " + TCID + " "+choice+"3");
+                TeacherTimeTableINFO teacherTimeTableRoom = dataSnapshot.getValue(TeacherTimeTableINFO.class);
+                // Log.e(TAG, "Title/DAta: " + teacherTimeTableINFO.getSubject1());
+
+                // cls.setText(teacherTimeTableINFO.getClasss());
+                r1.setText(teacherTimeTableRoom.getRoom1());
+                r2.setText(teacherTimeTableRoom.getRoom2());
+                r3.setText(teacherTimeTableRoom.getRoom3());
+                r4.setText(teacherTimeTableRoom.getRoom4());
+                r5.setText(teacherTimeTableRoom.getRoom5());
+                r6.setText(teacherTimeTableRoom.getRoom6());
+                r7.setText(teacherTimeTableRoom.getRoom7());
+                r8.setText(teacherTimeTableRoom.getRoom8());
+            }
+
+
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(ViewStudentTimeTable.this, "Data Not Found", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -221,8 +257,7 @@ public class ViewStudentTimeTable extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                //    Toast.makeText(HostActivityMain.this, "LogOut Successful", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(ViewStudentTimeTable.this, "Data Not Found", Toast.LENGTH_SHORT).show();
             }
         });
 

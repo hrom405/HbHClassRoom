@@ -30,5 +30,20 @@
         <item>SATURDAY</item>
     </string-array>
     <!-- TODO: Spinner Item in Staff Occupation -->
+    <!-- TODO: Spinner Item in Teacher's Attendance -->
+    <string-array name="Select_Month">
+        <item>JANUARY</item>
+        <item>FEBRUARY</item>
+        <item>MARCH</item>
+        <item>APRIL</item>
+        <item>MAY</item>
+        <item>JUNE</item>
+        <item>JULY</item>
+        <item>AUGUST</item>
+        <item>SEPTEMBER</item>
+        <item>OCTOBER</item>
+        <item>NOVEMBER</item>
+        <item>DECEMBER</item>
+    </string-array>
 
 </resources>

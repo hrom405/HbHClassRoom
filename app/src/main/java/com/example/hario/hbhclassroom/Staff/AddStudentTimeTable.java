@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AddStudentTimeTable extends AppCompatActivity {
-    private EditText tcID,cls,s1,s2,s3,s4,s5,s6,s7,s8,day,t1,t2,t3,t4,t5,t6,t7,t8;
+    private EditText tcID,cls,s1,s2,s3,s4,s5,s6,s7,s8,day,t1,t2,t3,t4,t5,t6,t7,t8,r1,r2,r3,r4,r5,r6,r7,r8;
     private Button addTimeTable;
     private ProgressDialog progressDialog;
     private DatabaseReference databaseReference;
@@ -50,6 +50,15 @@ public class AddStudentTimeTable extends AppCompatActivity {
         t6=findViewById(R.id.add_tchrID6);
         t7=findViewById(R.id.add_tchrID7);
         t8=findViewById(R.id.add_tchrID8);
+
+        r1=findViewById(R.id.add_RoomNo1);
+        r2=findViewById(R.id.add_RoomNo2);
+        r3=findViewById(R.id.add_RoomNo3);
+        r4=findViewById(R.id.add_RoomNo4);
+        r5=findViewById(R.id.add_RoomNo5);
+        r6=findViewById(R.id.add_RoomNo6);
+        r7=findViewById(R.id.add_RoomNo7);
+        r8=findViewById(R.id.add_RoomNo8);
 
 
 
@@ -87,21 +96,32 @@ public class AddStudentTimeTable extends AppCompatActivity {
         final String T7= t7.getText().toString();
         final String T8= t8.getText().toString();
 
+        final String R1= r1.getText().toString();
+        final String R2= r2.getText().toString();
+        final String R3= r3.getText().toString();
+        final String R4= r4.getText().toString();
+        final String R5= r5.getText().toString();
+        final String R6= r6.getText().toString();
+        final String R7= r7.getText().toString();
+        final String R8= r8.getText().toString();
+
         if (clss!=null && Day!=null)
         {
             progressDialog.setMessage("Uploading...");
             progressDialog.show();
 
-            final TeacherTimeTableINFO teacherTimeTableTCID = new TeacherTimeTableINFO(clss,Day, S1,S2,
-                    S3,S4,S5,S6,S7,S8,tcid);
+            //final TeacherTimeTableINFO teacherTimeTableTCID = new TeacherTimeTableINFO(clss,Day, S1,S2,
+            //        S3,S4,S5,S6,S7,S8,tcid);
             final TeacherTimeTableINFO teacherTimeTableCLASS = new TeacherTimeTableINFO(clss,Day,S1,S2,
                     S3,S4,S5,S6,S7,S8);
             final TeacherTimeTableINFO teacherTimeTableTINO= new TeacherTimeTableINFO(tcid,clss,Day,T1,T2,T3,T4,T5,T6,T7,T8,Day+"2");
+            final TeacherTimeTableINFO StudentTimeTableRoomNo= new TeacherTimeTableINFO(tcid,clss,Day,R1,R2,R3,R4,R5,R6,R7,R8,Day+"2",Day+"3");
 
 
            // databaseReference.child("teacher").child("timetable").child(tcid).child(Day).setValue(teacherTimeTableTCID);
             databaseReference.child("class").child(clss).child("timetable").child(Day).setValue(teacherTimeTableCLASS);
             databaseReference.child("class").child(clss).child("timetable").child(Day+"2").setValue(teacherTimeTableTINO);
+            databaseReference.child("class").child(clss).child("timetable").child(Day+"3").setValue(StudentTimeTableRoomNo);
             progressDialog.hide();
 
             Toast.makeText(getApplicationContext(), clss+" "+Day+"'s TimeTable Added Successfully!", Toast.LENGTH_LONG).show();

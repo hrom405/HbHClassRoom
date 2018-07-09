@@ -17,7 +17,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AddTeacherTimeTable extends AppCompatActivity {
-    private EditText tcID,cls,s1,s2,s3,s4,s5,s6,s7,s8,day,t1,t2,t3,t4,t5,t6,t7,t8;
+    private EditText tcID,cls,s1,s2,s3,s4,s5,s6,s7,s8,day,t1,t2,t3,t4,t5,t6,t7,t8,r1,r2,r3,r4,r5,r6,r7,r8;
     private Button addTimeTable;
     private ProgressDialog progressDialog;
     private DatabaseReference databaseReference;
@@ -55,6 +55,14 @@ public class AddTeacherTimeTable extends AppCompatActivity {
         t7=findViewById(R.id.add_tchrID7); t7.setHint("Class"); t7.setFilters(new InputFilter[]{new InputFilter.AllCaps()});t7.setInputType(1);
         t8=findViewById(R.id.add_tchrID8); t8.setHint("Class"); t8.setFilters(new InputFilter[]{new InputFilter.AllCaps()});t8.setInputType(1);
 
+        r1=findViewById(R.id.add_RoomNo1);
+        r2=findViewById(R.id.add_RoomNo2);
+        r3=findViewById(R.id.add_RoomNo3);
+        r4=findViewById(R.id.add_RoomNo4);
+        r5=findViewById(R.id.add_RoomNo5);
+        r6=findViewById(R.id.add_RoomNo6);
+        r7=findViewById(R.id.add_RoomNo7);
+        r8=findViewById(R.id.add_RoomNo8);
 
 
         addTimeTable=findViewById(R.id.add_timetable_button);
@@ -73,6 +81,7 @@ public class AddTeacherTimeTable extends AppCompatActivity {
         final String tcid = tcID.getText().toString();
         final String clss = cls.getText().toString();
         final String Day = day.getText().toString();
+
         final String S1 = s1.getText().toString();
         final String S2 = s2.getText().toString();
         final String S3 = s3.getText().toString();
@@ -81,6 +90,7 @@ public class AddTeacherTimeTable extends AppCompatActivity {
         final String S6 = s6.getText().toString();
         final String S7 = s7.getText().toString();
         final String S8 = s8.getText().toString();
+
         final String T1= t1.getText().toString();
         final String T2= t2.getText().toString();
         final String T3= t3.getText().toString();
@@ -89,6 +99,16 @@ public class AddTeacherTimeTable extends AppCompatActivity {
         final String T6= t6.getText().toString();
         final String T7= t7.getText().toString();
         final String T8= t8.getText().toString();
+
+        final String R1= r1.getText().toString();
+        final String R2= r2.getText().toString();
+        final String R3= r3.getText().toString();
+        final String R4= r4.getText().toString();
+        final String R5= r5.getText().toString();
+        final String R6= r6.getText().toString();
+        final String R7= r7.getText().toString();
+        final String R8= r8.getText().toString();
+
 
         if (tcid!=null &&Day!=null)
         {
@@ -101,9 +121,13 @@ public class AddTeacherTimeTable extends AppCompatActivity {
                     S3,S4,S5,S6,S7,S8);
             final TeacherTimeTableINFO teacherTimeTableTINO= new TeacherTimeTableINFO(tcid,clss,Day,T1,T2,T3,T4,T5,T6,T7,T8,Day+"2");
 
+            final TeacherTimeTableINFO teacherTimeTableRoomInfo= new TeacherTimeTableINFO(tcid,clss,Day,R1,R2,R3,R4,R5,R6,R7,R8,Day+"2",Day+"3");
+
 
             databaseReference.child("teacher").child("timetable").child(tcid).child(Day).setValue(teacherTimeTableTCID);
             databaseReference.child("teacher").child("timetable").child(tcid).child(Day+"2").setValue(teacherTimeTableTINO);
+            databaseReference.child("teacher").child("timetable").child(tcid).child(Day+"3").setValue(teacherTimeTableRoomInfo);
+
             //databaseReference.child("class").child(clss).child("timetable").child(Day).setValue(teacherTimeTableCLASS);
             //databaseReference.child("class").child(clss).child("timetable").child(Day+"2").setValue(teacherTimeTableTINO);
             progressDialog.hide();
